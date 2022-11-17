@@ -1,8 +1,14 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Heading } from './Heading';
 import { Employeelist } from './Employeelist';
+import { Topheader } from '../Header/Topheader';
+import { Sideheader } from '../Header/Sideheader';
 
 export const Home = () => {
+    const [size, setSize] = useState(false);
+    const handlechange = () => {
+        setSize(!size);
+    }
     return (
         <Fragment>
             <div className="App">
